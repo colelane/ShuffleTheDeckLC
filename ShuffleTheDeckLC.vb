@@ -27,9 +27,11 @@ Shuffle:
             Console.WriteLine($"Tap enter to deal cards.
 Press q to quit at any time.
 Press spacebar at anytime to shuffle and restart")
-
-            Console.ReadLine()
-
+            Console.WriteLine()
+            Select Case Console.ReadKey().Key
+                Case ConsoleKey.Q
+                    Exit Sub
+            End Select
             For i = 0 To 51
                 'This section takes one of the 52 numbers in the cards array, and randomly
                 'swaps it with another number.  Can't ever swap with an array cell lower than the current
